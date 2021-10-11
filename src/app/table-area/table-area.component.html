@@ -1,0 +1,42 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+      <app-control-panel [IsFirstMove]="IsFirstMove"  (movBtnClickedEvent)="move()" (lftBtnClickedEvent)="rotate($event)" (rhtBtnClickedEvent)="rotate($event)" (rptBtnClickedEvent)="r.displayReport()" (facingValueEvent)="getFacingValue($event)"
+      (plcBtnClickedEvent)="getFormValidValue($event)"  (xValueEvent)="getXValue($event)" (yValueEvent)="getYValue($event)"></app-control-panel>
+
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="parent-div">
+    <div class="divDimension">
+         <h2 class="h2-style">Toy Robot Simulator</h2>
+
+       <app-report #r [resultStr]="resultString"  ></app-report>
+
+      <table id="tbl-area" name="tbl-area" class="table-area">
+          <tr class="rowHt">
+              <td id="tbl-column" class="rowHt">
+                <img src='./assets/images/robot-48.png'  height="50" width="50" class="img-robot-48" id="robot" name="robot" alt="Robot">
+              </td>
+           </tr>
+      </table>
+    </div>
+      <div id="log-div" class="log-style">
+        <h2 class="h2-style">***Command Log</h2>
+        <div id="del-div" class="log-del">
+          <p>
+          <button mat-icon-button id="close" name="close" color="basic" (click)="clearLog()">
+            <mat-icon>delete</mat-icon>
+         </button>
+         <span>
+          Click icon to Clear Log
+        </span>
+         </p>
+        <div id="scoll-div" class="txtA-div-style">
+        <textarea id="scroll-log" name="scroll-log" class="txt-area" rows="32" cols="30" ></textarea>
+       </div>
+
+      </div>
+       </div>
+   </div>
+  </mat-drawer-content>
+ </mat-drawer-container>
+

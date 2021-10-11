@@ -1,0 +1,89 @@
+.center-align
+{
+    text-align: center;
+    align-self: center;
+}
+
+.panel-style
+{ 
+ background-color: greenyellow;
+ color: black; 
+ font-weight: bold;
+ align-content: center;
+ vertical-align: top;
+}
+
+.input-style{
+    width:100px;
+}
+.command-div
+{ 
+ background-color: greenyellow;
+ color: black;
+ font-weight: bold;
+ align-content: left;
+ text-align: left;
+ vertical-align: top; 
+}
+
+.rad-label{
+    width: 15px;
+    height: 15px; 
+    text-align: top;
+    vertical-align: center;
+    color: black;
+    font-weight: bold; 
+}
+.rad-button{
+   width: 15px;
+   height: 15px;
+   color: black;
+   font-weight: bold;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 12px;
+   text-align: top;
+   vertical-align: center;
+}
+
+.button-style
+{
+   padding: 2px;  
+   width: 100px;
+   height: 34px;
+   color: black;
+   font-weight: bold;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 15px;
+   background-color: white;
+   text-align: center; 
+  
+}
+
+.big-button-style
+{
+   padding: 2px; 
+   width: 200px;
+   height: 34px;
+   color: black;
+   font-weight: bold;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 15px;
+   background-color: white;
+   text-align: center;
+   align-content: center;
+
+  
+}
+
+h2, span{
+    vertical-align: top;
+    text-align: left;   
+}
+
+h2{
+    border-bottom:ridge ;
+    border-color: silver;
+}
+p{
+    margin-bottom: 0.7rem;
+}

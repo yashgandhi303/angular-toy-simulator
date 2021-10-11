@@ -1,0 +1,75 @@
+<form [formGroup]="controlPanelForm"  (ngSubmit)="onSubmit()" >
+<div class="panel-style">
+  <h2>
+  <img src='./assets/images/robot-48.png' height="30" width="30" class="img-robot-48" id="palette-robo" name="palette-robo" alt="Robot">
+  <span>Toy Simulator
+  </span>
+</h2>
+<div  class="command-div">
+    <p>Position your Robot</p>
+
+  <div class="command-div">
+    <label>
+      X:&nbsp;
+      <input type="number" class="input-style" id="placeX" matInput (input)="newXItem($event.target.value)"  min="0" max="5" name="placeX"  formControlName="placeX">
+    </label>
+    <p></p>
+    <label>
+      Y:&nbsp;
+      <input type="number" class="input-style" id="placeY" matInput (input)="newYItem($event.target.value)" min="0" max="5" name="placeY"  formControlName="placeY">
+    </label>
+</div>
+<p></p>
+
+<div class="command-div">
+    <p>Select where should your Robot face?</p>
+       <label class="rad-label">
+        East&nbsp;&nbsp;
+        <input type="radio" class="rad-button"  name="radDirection" (change)="newFacingItem($event.target.value)"  formControlName="radDirection"  value="East">
+      </label>
+      <br>
+      <label class="rad-label">
+        West&nbsp;
+        <input type="radio" class="rad-button" name="radDirection" (change)="newFacingItem($event.target.value)" formControlName="radDirection"  value="West">
+      </label>
+      <br>
+      <label class="rad-label">
+        North
+        <input type="radio"class="rad-button" name="radDirection" (change)="newFacingItem($event.target.value)"  formControlName="radDirection" value="North">
+       </label>
+       <br>
+      <label class="rad-label">
+        South
+        <input type="radio" class="rad-button" name="radDirection" (change)="newFacingItem($event.target.value)" formControlName="radDirection"  value="South">
+      </label>
+    </div>
+    <p></p>
+
+    <div class="command-div">
+      <p>Click on Place button to place Robo on table</p>
+      <button type="submit" class="big-button-style" value="Place"  id="btnPlace" name="btnPlace">Place Robot on Table</button>
+   </div>
+  <p></p>
+
+
+  <div class="command-div">
+     <p>Click on Move button to move one step</p>
+     <button type="button" class="big-button-style" [disabled]="IsFirstMove" (click)="clickMove($event.target.value)" value="Move"  id="moveUnit" name="moveUnit">Move One Step</button>
+  </div>
+  <p></p>
+
+  <div class="command-div">
+    <p>Click on Left/Right button to Rotate Robot</p>
+     <button  type="button"   class="button-style" [disabled]="IsFirstMove" (click)="rotateLeft($event.target.value)"  value="Left"  id="moveLeft" name="moveLeft">Left</button>
+     <button   type="button"   class="button-style"  [disabled]="IsFirstMove" (click)="rotateRight($event.target.value)" value="Right" id="moveRight" name="moveRight">Right</button>
+ </div>
+<p></p>
+</div>
+</div>
+</form>
+
+ <div class="panel-style">
+  <p class="command-div">Click on Report to know Robot's Position</p>
+  <button class="big-button-style" (click)="clickReport($event.target.value)" [disabled]="IsFirstMove"  value="Report" id="report-btn" name="report-btn">Report Position</button>
+</div>
+
